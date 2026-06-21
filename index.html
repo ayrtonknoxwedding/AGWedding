@@ -46,15 +46,13 @@
   body {
     font-family: var(--sans);
     background-color: var(--butter);
-    background-image: 
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='40'%3E%3Cpolygon points='2,20 20,2 38,20 20,38' fill='%23c5dd65' opacity='0.85'/%3E%3Ccircle cx='44' cy='20' r='3.5' fill='%23f5c518' opacity='0.9'/%3E%3C/svg%3E"),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='40'%3E%3Cpolygon points='2,20 20,2 38,20 20,38' fill='%23c5dd65' opacity='0.85'/%3E%3Ccircle cx='44' cy='20' r='3.5' fill='%23f5c518' opacity='0.9'/%3E%3C/svg%3E"),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='48'%3E%3Cpolygon points='20,2 38,20 20,38 2,20' fill='%23c5dd65' opacity='0.85'/%3E%3Ccircle cx='20' cy='44' r='3.5' fill='%23f5c518' opacity='0.9'/%3E%3C/svg%3E"),
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='48'%3E%3Cpolygon points='20,2 38,20 20,38 2,20' fill='%23c5dd65' opacity='0.85'/%3E%3Ccircle cx='20' cy='44' r='3.5' fill='%23f5c518' opacity='0.9'/%3E%3C/svg%3E");
-    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-    background-position: top left, bottom left, left top, right top;
-    background-size: 36px 30px, 36px 30px, 30px 36px, 30px 36px;
-    padding: 30px;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='40'%3E%3Cpolygon points='10,3 19,12 10,21 1,12' fill='%23c5dd65' opacity='0.9'/%3E%3Ccircle cx='10' cy='32' r='3.5' fill='%23f5c518' opacity='0.95'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='40'%3E%3Cpolygon points='10,3 19,12 10,21 1,12' fill='%23c5dd65' opacity='0.9'/%3E%3Ccircle cx='10' cy='32' r='3.5' fill='%23f5c518' opacity='0.95'/%3E%3C/svg%3E");
+    background-repeat: repeat-y, repeat-y;
+    background-position: 0 0, 100% 0;
+    background-size: 20px 40px, 20px 40px;
+    padding: 0 25px;
     color: var(--ink);
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
@@ -175,10 +173,28 @@
     margin-bottom: 0.75rem;
   }
 
+  .section-title {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--sage-dark);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+
+  .section-heading {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--sage-dark);
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+  }
+
   .intro-text {
     font-family: var(--serif);
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.7;
     color: var(--ink-mid);
   }
@@ -386,6 +402,18 @@
 
   #form-msg.error { color: #c0392b; }
 
+
+
+
+  .h-strip {
+    height: 24px;
+    max-width: 740px;
+    margin: 0 auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='24'%3E%3Cpolygon points='12,2 22,12 12,22 2,12' fill='%23c5dd65' opacity='0.9'/%3E%3Ccircle cx='30' cy='12' r='3' fill='%23f5c518' opacity='0.95'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 36px 24px;
+    background-position: left center;
+  }
   @media (max-width: 540px) {
     .site-header { padding: 2rem 1.25rem 1.75rem; }
     .card-top { flex-wrap: wrap; }
@@ -394,9 +422,10 @@
 </style>
 </head>
 <body>
+<div class="h-strip"></div>
 <header class="site-header">
   <div class="header-rule">
-    <p class="eyebrow">Accommodation</p>
+    <p class="eyebrow">Save the Date</p>
   </div>
   <h1 class="couple-names">A&amp;G Wedding</h1>
   <div class="header-divider"><span></span></div>
@@ -410,7 +439,7 @@
 <main class="container">
 
   <div class="intro-block">
-    <p class="section-label">Your address</p>
+    <p class="section-title">Your Address</p>
     <p class="intro-text" style="margin-bottom: 1.5rem;">So we can send you your formal invitation, please share your postal address with us below.</p>
 
     <form id="address-form">
@@ -428,7 +457,7 @@
   </div>
 
   <div class="intro-block">
-    <p class="section-label">Where to stay</p>
+    <p class="section-title">Accommodation</p>
     <p class="intro-text">
       We've put together a selection of places to stay near the venue and we recommend booking in advance as it will be popular over the May Bank Holiday Weekend.
     </p>
@@ -574,40 +603,5 @@
 <footer class="site-footer">
   Archie &amp; Georgie &nbsp;·&nbsp; 2027
 </footer>
-<script>
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby8XpEGVTJhBFKWDyV2rLaAViTPPMIvbEeFB61WHhTBkwafea-GTpfa05AucL3uxYtDyg/exec';
-
-  document.getElementById('address-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    const msg = document.getElementById('form-msg');
-    const name = document.getElementById('name').value.trim();
-    const address = document.getElementById('address').value.trim();
-
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    msg.style.display = 'none';
-    msg.className = '';
-
-    try {
-      await fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, address })
-      });
-      msg.textContent = 'Thank you! We\'ve received your address.';
-      msg.style.display = 'block';
-      document.getElementById('address-form').reset();
-      btn.textContent = 'Sent ✓';
-    } catch (err) {
-      msg.textContent = 'Something went wrong — please try again or email us at ayrtonknoxwedding@gmail.com';
-      msg.className = 'error';
-      msg.style.display = 'block';
-      btn.disabled = false;
-      btn.textContent = 'Send address';
-    }
-  });
-</script>
+<div class="h-strip"></div>
 </body>
-</html>
